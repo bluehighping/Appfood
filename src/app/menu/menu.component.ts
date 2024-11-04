@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
   }
 
   loadMenu() {
-    this.http.get<any[]>('http://localhost:3000/api/menu').subscribe(data => {
+    this.http.get<any[]>('https://lk4f4fm2-3000.asse.devtunnels.ms/api/menu').subscribe(data => {
       this.products = data.map(item => new Product(
         item.id,
         item.name,

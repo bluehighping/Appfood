@@ -73,7 +73,7 @@ export class CartComponent implements OnInit {
   confirmAction() {
     const orderSummary = this.generateOrderSummary();
 
-    this.http.post('http://localhost:3000/api/order', orderSummary).subscribe({
+    this.http.post('https://lk4f4fm2-3000.asse.devtunnels.ms/api/order', orderSummary).subscribe({
       next: response => {
         console.log('Order confirmed:', response);
         alert('Thank you for your order! Check console for details.');
