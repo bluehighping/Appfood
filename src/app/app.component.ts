@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
 import { CommonModule } from '@angular/common';
-//import { routes } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MenuComponent, CommonModule, RouterModule],
+  standalone: true, // ทำให้เป็น standalone component
+  imports: [CommonModule, RouterModule], // นำเข้า CommonModule และ RouterModule
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

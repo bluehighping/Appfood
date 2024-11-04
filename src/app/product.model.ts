@@ -16,4 +16,12 @@ export class Product {
     this.quantity = quantity;
     this.stockQuantity = stockQuantity; 
   }
+
+  reduceStock(quantity: number): boolean {
+    if (this.stockQuantity >= quantity) {
+      this.stockQuantity -= quantity;
+      return true;
+    }
+    return false;
+  }
 }

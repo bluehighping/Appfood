@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';  
 import { RouterModule } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
-    //AppComponent
+    
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    MenuComponent,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [] 
 })
 export class AppModule { }
