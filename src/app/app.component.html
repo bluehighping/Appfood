@@ -1,0 +1,25 @@
+
+<div *ngIf="!isCartPage()"> 
+ <div class="header">
+    <div class="header-content">
+      <img src="UI/App/QR-Code.png" alt="QR-Code" class="QR" />
+      <h1>Table</h1>
+      <div class="cart-icon">
+        <a [routerLink]="['/cart']" style="background: none; border: none; padding: 0;">
+          <img src="UI/App/Cart.png" alt="Cart Icon" (click)="navigateToCart()" class="icon">
+          <span class="item-count" *ngIf="cartCount > 0">{{ cartCount }}</span>
+        </a>
+      </div>
+    </div>   
+  </div>
+  
+  <div class="yellow-bar">
+     <span class="menu-label">Menu</span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+
